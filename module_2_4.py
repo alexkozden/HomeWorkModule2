@@ -8,9 +8,7 @@ for i in range(len(numbers)):
     n = numbers[i]
     if n < 2:
         continue
-    else:
-        f = n ** (1 / 2)
-    for a in range(2, int(f + 1)):
+    for a in range(2, i):
         if n % a == 0:
             is_prime = False
             break
@@ -18,6 +16,5 @@ for i in range(len(numbers)):
         not_primes.append(n)
     else:
         primes.append(n)
-    is_prime = True
 print('Primes:', primes)
 print('Not primes:', not_primes)
